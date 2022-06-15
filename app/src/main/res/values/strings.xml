@@ -1,4 +1,12 @@
 <resources>
     <string name="app_name">CarConsumptionManager</string>
-    <string name="app_name">CarConsumptionManager</string>
+    <string name="total_consume_detail">消费总览</string>
+    <string name="total_consume">总消费</string>
+    <string name="down_payments">首付</string>
+    <string name="monthly_payment">月供</string>
+    <string name="oil">加油</string>
+    <string name="charge">充电</string>
+    <string name="park">停车费</string>
+    <string name="toll_fee">高速过路费</string>
+    <string name="view_detail">查看详情</string>
 </resources>
