@@ -9,16 +9,17 @@ import android.widget.TextView;
 
 
 import com.xiaojianma.carconsumptionmanager.R;
+import com.xiaojianma.carconsumptionmanager.model.ConsumeItem;
 
 import java.util.List;
 import java.util.Map;
 
-public class ListItemAdapter extends BaseAdapter {
+public class ConsumeDetailsAdapter extends BaseAdapter {
     private Context context;
-    private List<Map<String, String>> list;
+    private List<ConsumeItem> list;
     private LayoutInflater inflater;
 
-    public ListItemAdapter(Context context, List<Map<String, String>> list) {
+    public ConsumeDetailsAdapter(Context context, List<ConsumeItem> list) {
         this.context = context;
         inflater = LayoutInflater.from(context);
         this.list = list;
@@ -44,26 +45,27 @@ public class ListItemAdapter extends BaseAdapter {
         ListItem listItem = null;
         if (convertView == null) {
             listItem = new ListItem();
-            convertView = inflater.inflate(R.layout.listitem_adapter, null);
-//            listItem.name = convertView.findViewById(R.id.name);
-//            listItem.age = convertView.findViewById(R.id.age);
-//            listItem.gender = convertView.findViewById(R.id.gender);
-//            listItem.number = convertView.findViewById(R.id.number);
+            convertView = inflater.inflate(R.layout.consume_details_adapter, null);
+            listItem.type = convertView.findViewById(R.id.consume_type);
+            listItem.money = convertView.findViewById(R.id.consume_money);
+            listItem.date = convertView.findViewById(R.id.consume_date);
+            listItem.position = convertView.findViewById(R.id.consume_position);
             convertView.setTag(listItem);
         } else {
             listItem = (ListItem) convertView.getTag();
         }
-        listItem.name.setText(list.get(position).get("name").toString());
-        listItem.age.setText(list.get(position).get("age").toString());
-        listItem.gender.setText(list.get(position).get("gender").toString());
-        listItem.number.setText(list.get(position).get("number").toString());
+        ConsumeItem consumeItem = list.get(position);
+        listItem.type.setText(consumeItem.getType());
+        listItem.money.setText(consumeItem.getMoney().toString());
+        listItem.date.setText(consumeItem.getDate());
+        listItem.position.setText(consumeItem.getPosition());
         return convertView;
     }
 
     class ListItem {
-        TextView name;
-        TextView age;
-        TextView gender;
-        TextView number;
+        TextView type;
+        TextView money;
+        TextView date;
+        TextView position;
     }
 }

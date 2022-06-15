@@ -9,4 +9,9 @@
     <string name="park">停车费</string>
     <string name="toll_fee">高速过路费</string>
     <string name="view_detail">查看详情</string>
+    <string name="consume_details">消费详情</string>
+    <string name="consume_type">消费类型</string>
+    <string name="consume_money">消费金额</string>
+    <string name="consume_date">消费时间</string>
+    <string name="consume_position">消费地点</string>
 </resources>

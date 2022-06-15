@@ -11,15 +11,21 @@ public class ConsumeItem {
 
     BigDecimal money;
 
-    java.lang.String position;
+    String position;
 
-    java.lang.String date;
+    String date;
 
-    public ConsumeItem(String type, BigDecimal money, java.lang.String position, java.lang.String date) {
+    /**
+     * 是否开了发票
+     */
+    boolean invoice;
+
+    public ConsumeItem(String type, BigDecimal money, String position, String date, boolean invoice) {
         this.type = type;
         this.money = money;
         this.position = position;
         this.date = date;
+        this.invoice = invoice;
     }
 
     public String getType() {
@@ -56,5 +62,13 @@ public class ConsumeItem {
     public ConsumeItem setDate(java.lang.String date) {
         this.date = date;
         return this;
+    }
+
+    public boolean isInvoice() {
+        return invoice;
+    }
+
+    public void setInvoice(boolean invoice) {
+        this.invoice = invoice;
     }
 }
