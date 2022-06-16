@@ -14,4 +14,11 @@
     <string name="consume_money">消费金额</string>
     <string name="consume_date">消费时间</string>
     <string name="consume_position">消费地点</string>
+    <string name="oil_type">汽油类型</string>
+    <string name="oil_unit">升</string>
+    <string name="oil_price_unit">元/升</string>
+    <string name="money_unit">元</string>
+    <string name="oil_capacity">油量</string>
+    <string name="oil_price">油价</string>
+    <string name="submit">提交</string>
 </resources>
